@@ -1,7 +1,13 @@
-{% extends 'base.html' %} {% load static %} {% block title %}Todos los cursos{%
-endblock title %} {% block custom_styles %}
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block title %}Todos los cursos{%endblock title %} 
+
+{% block custom_styles %}
 <link rel="stylesheet" href="{% static 'css/styles.css'%}" />
-{% endblock custom_styles %} {% block content %}
+{% endblock custom_styles %} 
+
+{% block content %}
 
 <div class="layout">
   {% include 'includes/sidebar.html' %}
@@ -52,6 +58,8 @@ endblock title %} {% block custom_styles %}
   </div>
 </div>
 
-{% endblock content %} {% block scripts %}
+{% endblock content %} 
+
+{% comment %} {% block scripts %}
 <script src="{% static 'js/script.js'%}"></script>
-{% endblock scripts %}
+{% endblock scripts %} {% endcomment %}
