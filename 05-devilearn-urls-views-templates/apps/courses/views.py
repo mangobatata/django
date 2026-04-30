@@ -37,15 +37,15 @@ def course_list(request):
             'level': 'Avanzado',
             'rating': 5.0,
             'course_title': 'Django Rest',
-            'instructor': 'Alison Walsh',
+            'instructor': 'Pepito Walsh',
             'course_image': 'images/curso_4.jpg',
             'instructor_image': 'https://randomuser.me/api/portraits/women/45.jpg'
-        }
+        },
+
     ]
     return render(request, "courses/courses.html", {
         'courses': courses
     })
-    # return render(request, "courses/courses.html")
 
 
 def course_detail(request):
@@ -56,7 +56,7 @@ def course_detail(request):
         'info_course': {
             'lessons': 79,
             'duration': 8,
-            'instructor': 'Ricardo Cuéllar'
+            'instructor': 'Federico Cuéllar'
         },
         'course_content': [
             {
@@ -113,6 +113,10 @@ def course_lessons(request):
                     },
                     {
                         'name': '¿Cómo usar la plataforma?',
+                        'type': 'article'
+                    },
+                    {
+                        'name': 'Instalaciones necesarias',
                         'type': 'article'
                     }
                 ]
