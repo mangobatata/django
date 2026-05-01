@@ -1,0 +1,24 @@
+{% extends 'layout.html' %} {% block title %} Landing page {% endblock title %}
+{% block content %}
+<div class="container">
+  <h1>Welcome to Our Landing Page</h1>
+  <p>This is a simple landing page template.</p>
+
+  {% if country == "Paraguay" %}
+  <p>Current country: {{ country | upper}}</p>
+  <p>Current city: {{ city }}</p>
+  {% endif %}
+
+  <p>Today's date: {{ today | date:"d/m/Y" }}</p>
+
+  <p>Cities:</p>
+  <ul>
+    {% for city in cities %}
+    <li><a href="{% url 'city' city.id %}">{{city.name}}</a></li>
+    {% empty %}
+    <li>No cities available.</li>
+    {% endfor %}
+  </ul>
+</div>
+
+{% endblock content %}

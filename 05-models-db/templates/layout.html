@@ -1,0 +1,24 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    {% block page_style %}{% endblock page_style %}
+  </head>
+  <body>
+    {% include 'includes/header.html' %}
+
+    <main>
+      <h1>Layout padre</h1>
+      {% block content %}
+      <!-- Main content will go here -->
+      {% endblock %}
+    </main>
+    <footer>
+      <p>&copy; {% now "Y" %} My Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
